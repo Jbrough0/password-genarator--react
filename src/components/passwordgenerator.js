@@ -37,7 +37,7 @@ class PasswordGenerator extends Component {
     // run all the above methods to calculate the password before rendering    
     return (
       <div>
-         <button onClick={this.getCriteria}></button>
+         <button onClick={this.getCriteria}>Generate</button>
       </div>
     )
   }
