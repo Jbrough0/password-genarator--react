@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import "./App.scss";
-import PasswordGenerator from "./src";
+import "./App.css";
+import PasswordGenerator from "./components/Password Generator";
 
 class App extends Component {
   render() {
