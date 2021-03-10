@@ -15,7 +15,7 @@ class PasswordGenerator extends Component {
       alert("this is an alert")
          const passwordlength =prompt("How long is the password? 8-128");
          const upperCaseChar =window.confirm("Do you want uppercase letters?");
-         const lowerCaseChar =window.confirm; window("Do you want lowercase letters?");
+         const lowerCaseChar =window.confirm("Do you want lowercase letters?");
          const NumbersChar =window.confirm("Do you want numbers?");
          const SymbolsChar =window.confirm("Do you want symbols?");
       if(upperCaseChar){
@@ -30,7 +30,14 @@ class PasswordGenerator extends Component {
       if(SymbolsChar){
         console.log("Success")
       }
-      // this.setState({}) all the values from above
+       this.setState({
+        passwordlength: 10,
+        upperCaseChar: ("ABCDEFGHIJKLMNOPQRSTUVWXTZ"),
+        lowerCaseChar: ("abcdefghijklmnopqrstuvwxyz"),
+        NumbersChar: ("0123456789"),
+        SymbolsChar: ("!'+,-./<>=?[]_{}|~@#$%^&*():;")
+       })
+       
   }
   // add all your methods for generating a password from the above state
   render() {
@@ -42,3 +49,4 @@ class PasswordGenerator extends Component {
     )
   }
 }
+export default PasswordGenerator
