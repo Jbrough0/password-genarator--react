@@ -7,9 +7,10 @@
     "react": "^17.0.1",
     "react-confirm-alert": "^2.7.0",
     "react-dom": "^17.0.1",
-    "react-scripts": "4.0.3"
+    "react-scripts": "4.0.3",
+    "homepage": "http://jbrough0.github.io/password-generator--reactor-app"
   },
-  "homepage": "http://jbrough0.github.io/password-generator--reactor-app",
+
  "scripts" : {  
   "start": "react-scripts start",
   "build": "react-scripts build",
