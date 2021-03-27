@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
-import PasswordGenerator from "./components/PasswordGenerator";
+import PasswordGenerator from "./components/passwordgenerator";
 
 class App extends Component {
   render() {
