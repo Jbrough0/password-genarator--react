@@ -1,10 +1,14 @@
 import charSets from "../charSets" ;
 import React, { Component } from 'react';
+const upperCaseChar= "ABCDEFGHIJKLMNOPQRSTUVWXTZ";
+        const lowerCaseChar="abcdefghijklmnopqrstuvwxyz";
+        const  NumbersChar= "0123456789";
+        const SymbolsChar= "!'+,-./<>=?[]_{}|~@#$%^&*():;"
 class PasswordGenerator extends Component {
   constructor(props){
     super(props);
     this.state = {
-        passwordlength: 0,
+      passwordlength: 0,
         upperCaseChar: false,
         lowerCaseChar: false,
         NumbersChar: false,
@@ -31,19 +35,45 @@ class PasswordGenerator extends Component {
         console.log("Success")
       }
        this.setState({
-        passwordlength: 10,
-        upperCaseChar: ("ABCDEFGHIJKLMNOPQRSTUVWXTZ"),
-        lowerCaseChar: ("abcdefghijklmnopqrstuvwxyz"),
-        NumbersChar: ("0123456789"),
-        SymbolsChar: ("!'+,-./<>=?[]_{}|~@#$%^&*():;")
+        passwordlength, 
+        upperCaseChar,
+        lowerCaseChar,
+        NumbersChar,
+        SymbolsChar,
        })
        
   }
   // add all your methods for generating a password from the above state
   render() {
     // run all the above methods to calculate the password before rendering    
+    var lowerChar = (lowerCaseChar) ? "abcdefghijklmnopqrstuvwxyz" : "";
+   var upperChar = (upperCaseChar) ? "ABCDEFGHIJKLMNOPQRSTUVWXTZ" : "";
+    var numChars = (NumbersChar) ? "0123456789" : "";
+    var specialChar = (SymbolsChar) ? "!'+,-./<>=?[]_{}|~@#$%^&*():;" : "" ;
+
+
+
+    var char = upperChar + lowerChar + numChars + specialChar;
+
+    const generatePassword=() =>{
+      var passwd = '';
+      
+  
+      for ( let i=0;i<this.state.passwordlength;i++) {
+       
+        var x = Math.floor(Math.random() * char.length);
+        passwd = passwd + (char[x]);
+  
+      }
+    
+      return passwd;
+    
+    }
+  
+
     return (
       <div>
+        <div>{generatePassword()}</div>
          <button onClick={this.getCriteria}>Generate</button>
       </div>
     )

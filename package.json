@@ -8,19 +8,16 @@
     "react-confirm-alert": "^2.7.0",
     "react-dom": "^17.0.1",
     "react-scripts": "4.0.3",
-    "homepage": "http://jbrough0.github.io/password-generator--reactor-app"
+    "homepage": "https://jbrough0.github.io/password-generator-react/"
   },
-
- "scripts" : {  
-  "start": "react-scripts start",
-  "build": "react-scripts build",
-  "test": "react-scripts test",
-  "eject": "react-scripts eject",
-  "predeploy": "npm run build",
-  "deploy": "gh-pages -d build"
-},
-  
-  
+  "scripts": {
+    "predeploy":"npm run build",
+    "deploy": "gh-pages -b master -d build", 
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
   "eslintConfig": {
     "extends": [
       "react-app",
